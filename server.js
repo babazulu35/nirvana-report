@@ -11,6 +11,8 @@ app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname + '/reports/1517871836526/mochawesome.html'));
 })
 
-app.listen(3000, () => {
+var port = process.env.port || 3000;
+
+app.listen(port, () => {
     console.log("Listening on port 3000");
 })
